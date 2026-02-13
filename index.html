@@ -1,0 +1,1673 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+ <html lang="it">
+    <head>
+    <meta charset="UTF-8" />
+    <title>San Valentino - Un sito tutto per te che sei l'amore della mia vita</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&display=swap');
+      #password-screen {
+  display: none;
+}
+
+#middle-screen {
+  display: none;
+}
+
+#question-screen {
+  display: block;
+}
+
+    body { 
+  margin: 0;
+  font-family: "Helvetica", Arial, sans-serif;
+  background: radial-gradient(circle at top, #ffb3c6, #ff8aa6, #ff6f91, #b8325a);
+  background-attachment: fixed;
+  overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    }
+    .container {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+    }
+    .card {
+  background: rgba(255, 240, 245, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(255, 0, 90, 0.25);
+  padding: 35px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 200, 220, 0.4);
+}
+
+    h1, h2 {
+    margin-top: 0;
+    color: #e63950;
+    }
+    .heart {
+    font-size: 40px;
+    margin-bottom: 10px;
+    }
+    /* Schermata password */
+    #password-screen {
+    display: block;
+    }
+    #gift-screen {
+    display: none;
+    } 
+    .password-input {
+    margin: 20px 0;
+    }
+    .password-input input {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 70%;
+    max-width: 250px;
+    text-align: center;
+    } 
+    .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #e63950;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+    .btn:hover { 
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .error {
+    color: #c62828;
+    margin-top: 10px;
+    min-height: 20px;
+    font-size: 14px;
+    } 
+    .choice-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.yes-btn {
+  background: #4CAF50;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.no-btn {
+  background: #e63946;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+#question-screen {
+  display: block;
+}
+
+#password-screen {
+  display: none;
+}
+
+#gift-screen {
+  display: none;
+}
+.fade-in {
+  animation: fadeInRomantic 0.8s ease forwards;
+}
+
+@keyframes fadeInRomantic {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+.big-pop {
+  animation: popBig 0.5s ease forwards;
+}
+
+@keyframes popBig {
+  0%   { transform: scale(1); }
+  60%  { transform: scale(3); }
+  100% { transform: scale(2.5); }
+}
+.shake {
+  animation: shakeAnim 0.4s ease;
+}
+
+@keyframes shakeAnim {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+#middle-screen .btn {
+  display: block;
+  margin: 20px auto 0 auto;
+}
+.question-gif {
+  width: 80%;
+  max-width: 250px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+    /* Schermata regalo */ 
+    #gift-screen {
+    text-align: left;
+    } 
+    .sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; margin-top: 20px;
+    }
+    .section-box {
+  background: rgba(255, 220, 230, 0.85);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(255, 0, 100, 0.2);
+  border: 1px solid rgba(255, 150, 180, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(255, 0, 120, 0.35);
+}
+
+    .section-box h3 { 
+    margin-top: 0;
+    color: #d81b60;
+    } 
+    .section-box p {
+    margin-bottom: 0;
+    color: #444;
+    } 
+    .note {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #777;
+    } 
+    .fade-in {
+    animation: fadeIn 1s ease forwards;
+    opacity: 0;
+    } 
+    .fade-out {
+    animation: fadeOut 0.8s ease forwards; 
+    } 
+    @keyframes fadeIn { 
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+    } 
+    @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+    }
+    .heart-floating {
+    position: fixed;
+    bottom: -20px;
+    font-size: 20px;
+    animation: floatUp 4s linear infinite;
+    opacity: 0.8;
+    } 
+    @keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-120vh) scale(1.8); opacity: 0; }
+    }
+    .internal-screen {
+    display: none; 
+    margin-top: 20px;
+    opacity:0;
+    }
+    .show-screen{
+    animation: fadeIn 0.8s ease forwards;
+    }
+    .slide-in {
+    animation: slideIn 0.6s ease forwards;
+    opacity: 0;
+    } 
+    @keyframes slideIn {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+    }
+    .slider {
+    width: 100%;
+    height: 700px; 
+    overflow: hidden;
+    border-radius: 12px;
+    margin-top: 20px;
+    position: relative;
+    }
+    .slides {
+    display: flex;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+    }
+    .slides img,
+.slides video {
+  width: 100%;   /* OGNI elemento occupa tutta la slide */
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  min-width: 100%;
+  flex-shrink: 0;    /* Impedisce di ridursi e affiancarsi */
+  border-radius: 12px; }
+#section2 .slider {
+  height: 700px; /* o l’altezza che preferisci */
+}
+    #pulse-heart {
+  font-size: 32px;
+  display: inline-block;
+  margin-right: 10px;
+  animation: heartbeat 1.2s infinite ease-in-out;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.25); }
+  40% { transform: scale(1); }
+  60% { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+.digital-text {
+  font-size: 20px;
+  color: #d81b60;
+  font-weight: bold;
+  letter-spacing: 1px;
+  animation: digitalFade 1.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes digitalFade {
+  0% { opacity: 0; filter: blur(4px); }
+  40% { opacity: 0.4; filter: blur(2px); }
+  100% { opacity: 1; filter: blur(0); }
+}
+.heart-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heart-bg span {
+  position: absolute;
+  display: block;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 24px;
+  animation: floatUp2 12s linear infinite;
+}
+
+@keyframes floatUp2 {
+  0% { transform: translateY(100vh) scale(0.8); opacity: 0; }
+  20% { opacity: 0.6; }
+  100% { transform: translateY(-20vh) scale(1.4); opacity: 0; }
+}
+h1, h2, h3 {
+  text-shadow: 0 0 8px rgba(255, 120, 160, 0.4);
+}
+.sparkle {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 200, 230, 0.8);
+  border-radius: 50%;
+  animation: sparkleMove 6s infinite ease-in-out;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes sparkleMove {
+  0% { transform: translateY(0) scale(0.5); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
+}
+.rose-border {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.rose-border span {
+  position: absolute;
+  font-size: 32px;
+  opacity: 0.25;
+}
+
+.rose-border .top { top: 10px; }
+.rose-border .bottom { bottom: 10px; }
+.rose-border .left { left: 10px; }
+.rose-border .right { right: 10px; }
+.falling-heart {
+  position: fixed;
+  top: -10px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.4);
+  animation: fall 8s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.7; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+.glitter:hover {
+  position: relative;
+  z-index: 99999;
+}
+
+.glitter:hover::after {
+  content: "✨";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  animation: sparklePop 0.8s ease-out;
+  font-size: 22px;
+  z-index: 99999;
+}
+
+@keyframes sparklePop {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.4); opacity: 1; }
+  100% { transform: scale(1); opacity: 0; }
+}
+/* Effetto apertura regalo */
+.section-box {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.section-box.opening {
+  animation: giftOpen 0.6s ease forwards;
+}
+
+@keyframes giftOpen {
+  0% { transform: scale(1) rotate(0deg); }
+  20% { transform: scale(0.95) rotate(-2deg); }
+  40% { transform: scale(1.05) rotate(2deg); }
+  60% { transform: scale(0.97) rotate(-1deg); }
+  100% { transform: scale(1.12) rotate(0deg); }
+}
+.trail-dot {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #c7eaff, #4fa3ff);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.8;
+  filter: blur(2px);
+  animation: fadeTrail 0.6s linear forwards;
+  z-index: 9999;
+}
+
+@keyframes fadeTrail {
+  from { opacity: 0.8; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.3); }
+}
+.heart-explosion {
+  position: absolute;
+  font-size: 20px;
+  animation: explodeHearts 0.8s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes explodeHearts {
+  0% { transform: scale(0.2); opacity: 1; }
+  100% { transform: translate(var(--x), var(--y)) scale(1.8); opacity: 0; }
+}
+.star {
+  position: fixed;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 200, 230, 0.9);
+  border-radius: 50%;
+  animation: starTwinkle 3s infinite ease-in-out;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes starTwinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.4); }
+}
+.fire-heart {
+  position: relative;
+  display: inline-block;
+}
+/* Nastro sopra le sezioni */
+.section-box {
+  position: relative;
+  overflow: hidden;
+  z-index:9999;
+}
+
+.section-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 8px;
+  background: linear-gradient(90deg, #ff8abf, #ff4fa3, #ff8abf);
+  animation: ribbonIdle 4s linear infinite;
+  border-radius: 4px;
+   z-index:9999;
+}
+
+/* Animazione idle del nastro (luccica leggermente) */
+@keyframes ribbonIdle {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Quando si apre la sezione, il nastro scivola via */
+.section-box.opening::before {
+  animation: ribbonSlideAway 0.6s ease forwards;
+}
+
+@keyframes ribbonSlideAway {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-40px); opacity: 0; }
+}
+.glitter-burst {
+  position: fixed;
+  font-size: 22px;
+  animation: glitterBurstAnim 0.8s ease-out forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes glitterBurstAnim {
+  0% { transform: scale(0.2); opacity: 1; }
+  100% { transform: translate(var(--x), var(--y)) scale(1.8); opacity: 0; }
+}
+.big-heart {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 120px;
+  opacity: 0;
+  animation: bigHeartAnim 1.2s ease-out forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes bigHeartAnim {
+  0% { transform: translate(-50%, -50%) scale(0.2); opacity: 0; }
+  40% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 0; }
+}
+.screen-flash {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 100, 160, 0.4);
+  animation: flashAnim 0.6s ease-out forwards;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+@keyframes flashAnim {
+  0% { opacity: 0; }
+  40% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.full-ribbon {
+  position: fixed;
+  inset: 0;
+  border: 6px dashed rgba(255, 120, 160, 0.7);
+  border-radius: 20px;
+  animation: ribbonFullAnim 1s ease forwards;
+  pointer-events: none;
+  z-index: 9997;
+}
+
+@keyframes ribbonFullAnim {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.2); }
+}
+.spark-in {
+  position: fixed;
+  font-size: 18px;
+  animation: sparkInAnim 0.8s ease-out forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes sparkInAnim {
+  0% { opacity: 0; transform: translate(var(--sx), var(--sy)) scale(0.5); }
+  100% { opacity: 1; transform: translate(0,0) scale(1); }
+}
+.magic-fade {
+  animation: magicFadeAnim 0.8s ease forwards;
+}
+
+@keyframes magicFadeAnim {
+  0% { opacity: 0; filter: blur(6px); }
+  100% { opacity: 1; filter: blur(0); }
+}
+.heart-frame {
+  width: 520px;   /* puoi cambiare liberamente */
+  height: 470px;  /* puoi cambiare liberamente */
+  margin: 0 auto;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Maschera cuore proporzionale */
+.heart-mask {
+  position: absolute;
+  inset: 0;
+  clip-path: url(#heart-clip);
+  overflow: hidden;
+}
+
+/* Mappa */
+#map-place {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease, opacity 0.6s ease;
+}
+
+/* Foto reale fuori dal cuore */
+.real-place-hidden {
+  display: none;
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto 0;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Nasconde il cuore dopo il click */
+.hide-heart {
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+.remove-heart-space {
+  display: none !important;
+}
+
+/* Effetto zoom */
+.zoom-map {
+  transform: scale(1.8);
+  opacity: 0;
+}
+
+/* Foto che appare */
+.show-real {
+  opacity: 1;
+  transform: scale(1);
+}
+#section5 {
+  flex-direction: column;
+  align-items: center;
+}
+#section5 .btn {
+  display: block;
+  margin: 0 auto 20px auto;
+}
+/* Stile base dell’elenco */
+.romantic-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.romantic-list li {
+  margin: 8px 0;
+  font-size: 18px;
+  opacity: 0; /* parte invisibile */
+  transform: translateY(10px);
+  animation: fadeInItem 0.6s ease forwards;
+}
+
+/* Animazione sequenziale */
+.animated-list li:nth-child(1) { animation-delay: 0.1s; }
+.animated-list li:nth-child(2) { animation-delay: 0.2s; }
+.animated-list li:nth-child(3) { animation-delay: 0.3s; }
+.animated-list li:nth-child(4) { animation-delay: 0.4s; }
+.animated-list li:nth-child(5) { animation-delay: 0.5s; }
+.animated-list li:nth-child(6) { animation-delay: 0.6s; }
+.animated-list li:nth-child(7) { animation-delay: 0.7s; }
+.animated-list li:nth-child(8) { animation-delay: 0.8s; }
+.animated-list li:nth-child(9) { animation-delay: 0.9s; }
+.animated-list li:nth-child(10) { animation-delay: 1s; }
+.animated-list li:nth-child(11) { animation-delay: 1.1s; }
+.animated-list li:nth-child(12) { animation-delay: 1.2s; }
+.animated-list li:nth-child(13) { animation-delay: 1.3s; }
+.animated-list li:nth-child(14) { animation-delay: 1.4s; }
+.animated-list li:nth-child(15) { animation-delay: 1.5s; }
+.animated-list li:nth-child(16) { animation-delay: 1.6s; }
+.animated-list li:nth-child(17) { animation-delay: 1.7s; }
+.animated-list li:nth-child(18) { animation-delay: 1.8s; }
+.animated-list li:nth-child(19) { animation-delay: 1.9s; }
+.animated-list li:nth-child(20) { animation-delay: 2s; }
+
+/* Animazione fade-in + slide-up */
+@keyframes fadeInItem {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cuoricino animato */
+.heart {
+  display: inline-block;
+  margin-right: 8px;
+  animation: heartBeat 1.2s infinite ease-in-out;
+}
+
+/* Effetto pulsazione del cuore */
+@keyframes heartBeat {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.25); }
+  60%  { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+.song-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 12px 0;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInItem 0.6s ease forwards;
+}
+
+.song-cover {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.song-link {
+  font-size: 18px;
+  color: #d63384;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.song-link:hover {
+  color: #ff4fa3;
+}
+.song-item:nth-child(1) { animation-delay: 0.1s; }
+.song-item:nth-child(2) { animation-delay: 0.2s; }
+.song-item:nth-child(3) { animation-delay: 0.3s; }
+.song-item:nth-child(4) { animation-delay: 0.4s; }
+/* Griglia 2x2 */
+.songs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));  /* 3 colonne */
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Card della canzone */
+.song-card {
+  position: relative;
+  padding-top: 25px; /* spazio per il cuore */
+}
+
+/* Cuoricino pulsante */
+.song-card .heart {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  animation: heartBeat 1.2s infinite ease-in-out;
+}
+
+/* Animazione cuore */
+@keyframes heartBeat {
+  0%   { transform: translateX(-50%) scale(1); }
+  30%  { transform: translateX(-50%) scale(1.25); }
+  60%  { transform: translateX(-50%) scale(1); }
+  100% { transform: translateX(-50%) scale(1); }
+}
+/* Effetto bordo luminoso */
+.song-card {
+  position: relative;
+  padding-top: 25px;
+  border-radius: 20px;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+/* Glow quando passi sopra */
+.song-card:hover {
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.7),
+              0 0 35px rgba(255, 105, 180, 0.5),
+              0 0 50px rgba(255, 105, 180, 0.3);
+  transform: scale(1.03);
+}
+.spotify-embed {
+  width: 100%;
+  max-width: 100%;
+  height: 252px; /* la tua altezza */
+  border: none;
+  overflow: hidden;
+  display: block;
+}
+.spotify-embed::-webkit-scrollbar {
+  display: none;
+}
+#wrongPassword h2 {
+  color: #d63384;
+  margin-bottom: 15px;
+}
+
+#wrongPassword p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.wrong-img {
+  width: 70%;
+  max-width: 350px;
+  border-radius: 20px;
+  margin-top: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+#real-caption {
+  display: none !important;
+}
+
+#real-caption.show {
+  display: block !important;
+  opacity: 1;
+}
+#typewriter-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  line-height: 1.6;
+  white-space: pre-line;
+  /* Fade-in elegante */ 
+  opacity: 0; 
+  transform: translateY(10px);
+   transition: opacity 1.5s ease, transform 1.5s ease;
+}
+/* Quando la lettera deve apparire */ 
+#typewriter-text.show { 
+  opacity: 1; 
+  transform: translateY(0);
+ }
+.firma {
+  font-family: 'Great Vibes', cursive;
+  font-size: 32px;
+  line-height: 1.4;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+#section1 h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+    </style>
+    </head>
+    <body>
+<!-- Clip-path cuore scalabile -->
+<svg width="0" height="0">
+  <defs>
+    <clipPath id="heart-clip" clipPathUnits="objectBoundingBox">
+      <path d="M0.5,0.9 C0.2,0.7,0,0.45,0,0.25 C0,0.1,0.1,0,0.25,0 C0.35,0,0.45,0.05,0.5,0.15 C0.55,0.05,0.65,0,0.75,0 C0.9,0,1,0.1,1,0.25 C1,0.45,0.8,0.7,0.5,0.9 Z"/>
+    </clipPath>
+  </defs>
+</svg>
+      <div id="stars-container"></div>
+      <div class="heart-bg">
+  <span style="left:10%;">❤️</span>
+  <span style="left:25%; animation-delay:2s;">🩷</span>
+  <span style="left:40%; animation-delay:4s;">💕</span>
+  <span style="left:60%; animation-delay:1s;">💖</span>
+  <span style="left:75%; animation-delay:3s;">💘</span>
+  <span style="left:90%; animation-delay:5s;">💝</span>
+</div>
+<div class="sparkle" style="left:15%; animation-delay:1s;"></div>
+<div class="sparkle" style="left:45%; animation-delay:3s;"></div>
+<div class="sparkle" style="left:75%; animation-delay:2s;"></div>
+<div class="rose-border">
+  <span class="top" style="left:5%;">🌹</span>
+  <span class="top" style="left:25%;">🌺</span>
+  <span class="top" style="left:45%;">🌹</span>
+  <span class="top" style="left:65%;">🌺</span>
+  <span class="top" style="left:85%;">🌹</span>
+
+  <span class="bottom" style="left:15%;">🌺</span>
+  <span class="bottom" style="left:35%;">🌹</span>
+  <span class="bottom" style="left:55%;">🌺</span>
+  <span class="bottom" style="left:75%;">🌹</span>
+
+  <span class="left" style="top:20%;">🌹</span>
+  <span class="left" style="top:50%;">🌺</span>
+  <span class="left" style="top:80%;">🌹</span>
+
+  <span class="right" style="top:30%;">🌺</span>
+  <span class="right" style="top:60%;">🌹</span>
+  <span class="right" style="top:85%;">🌺</span>
+</div>
+<div class="falling-heart" style="left:10%; animation-delay:0s;">💖</div>
+<div class="falling-heart" style="left:30%; animation-delay:2s;">💘</div>
+<div class="falling-heart" style="left:50%; animation-delay:4s;">🩷</div>
+<div class="falling-heart" style="left:70%; animation-delay:1s;">💕</div>
+<div class="falling-heart" style="left:90%; animation-delay:3s;">💞</div>
+
+    <audio id="bg-music" src="musica.mp3"></audio>
+    <div class="container">
+      <!-- SCHERMATA PREPASSWORD -->
+     <div id="question-screen" class="internal-screen card fade-in" style="display:block;">
+  <h1>Ue dove corri pccrè, prima di avere il tuo regalo dimmi...</h1>
+  <p>MI ami davvero?🤔</p>
+<!-- GIF sopra i bottoni -->
+ <img src="Foto/Cartu Sticker – Cartu – Ищите GIF-файлы и обменивайтесь ими.gif" 
+       alt="gif romantica"
+       class="question-gif">
+  <div class="choice-buttons">
+    <button id="yesBtn" class="yes-btn" onclick="answerYes()">SI</button>
+    <button id="noBtn" class="no-btn" onclick="answerNo()">NO</button>
+  </div>
+</div>
+<!-- SCHERMATA INTERMEDIA -->
+<div id="middle-screen" class="internal-screen card">
+  <h1>Sapevo che il tuo amore per me fosse sincero😍</h1>
+  <p>Ora puoi avere il tuo tanto desiderato regalo🎁.</p>
+
+  <img src="Foto/love.gif" 
+       alt="gif romantica"
+       style="width:80%; max-width:300px; border-radius:15px; margin-top:20px;">
+
+  <button class="btn" onclick="goToPassword()">Continua ➝</button>
+</div>
+<div id="wrongPassword" class="internal-screen card">
+    <button class="btn" onclick="goBackToPassword()">← Riprova</button>
+    <h2>Password errata amore mio (me lo aspettavo)</h2>
+    <p>Provo a darti un indizio ja, pensa ai numeri...📅</p>
+
+    <img src="Foto/Sad Cat Sticker - Find & Share on GIPHY.gif" class="wrong-img">
+    </div>
+    <!-- SCHERMATA PASSWORD -->
+    <div id="password-screen" class="internal-screen card">
+    <div class="heart">💍🩵</div>
+    <h1>Per vedere il tuo regalo...</h1>
+    <p>Inserisci la password segreta che solo tu puoi sapere (rifletti bene).</p>
+    <div class="password-input">
+    <input type="password" id="password" placeholder="Password segreta" /> </div>
+    <button class="btn" onclick="checkPassword()">Apri il regalo</button>
+    <div id="error-message" class="error"></div> 
+    </div>
+    <!-- SCHERMATA REGALO -->
+    <div id="gift-screen" class="internal-screen card">
+    <div class="heart">💌</div>
+    <h2>Buon San Valentino Pataccosa mia🩵</h2>
+    <p>Qui dentro troverai tutte le sorpresine pensate solo per te regina mia.</p>
+    <div class="sections">
+    <!-- SEZIONE 1 -->
+    <div class="section-box glitter" onclick="openSection('section1')">
+    <h3>Sezione 1 – L'amore che provo per la mia regina🩵👑</h3>
+    <p>
+    <!-- Qui puoi inserire il tuo testo romantico, una lettera, un ricordo, ecc. -->
+    </p>
+    </div> 
+    <!-- SEZIONE 2 -->
+    <div class="section-box glitter" onclick="openSection('section2')">
+    <h3>Sezione 2 – Un po' del nostro folle ma unico amore🔐</h3>
+    <p> <!-- Qui puoi inserire immagini, link a un album, descrizioni di momenti insieme -->
+    </p>
+    </div>
+    <!-- SEZIONE 3 --> 
+    <div class="section-box glitter" onclick="openSection('section3')">
+    <h3>Sezione 3 – Canzoni che mi fanno pensare a te🎵</h3>
+    <p> <!-- Qui puoi mettere link a Spotify/YouTube, titoli di canzoni, ecc. -->
+    </p> 
+    </div>
+    <!-- SEZIONE 4 -->
+    <div class="section-box glitter" onclick="openSection('section4')">
+    <h3>Sezione 4 – Promesse per il nostro futuro🔮</h3>
+    <p> <!-- Qui puoi scrivere promesse, sogni, progetti futuri insieme -->
+    </p>
+    </div>
+    <!-- SEZIONE 5 -->
+    <div class="section-box glitter" onclick="openSection('section5')">
+    <h3>Sezione 5 – L'inizio della nostra storia📍</h3>
+    <p></p>
+    </div>
+    <!-- SEZIONE 6 -->
+    <div class="section-box glitter" onclick="openSection('section6')">
+    <h3>Sezione 6 – Tempo trascorso da quando siamo marito e moglie⌛</h3>
+    <p></p>
+    </div>
+</div>
+<p class="note"> 
+    Alla fine ci sarà una bella sorpresa per te piccola :)
+    </p>
+</div>
+     <!-- SCHERMATE INTERNE DELLE SEZIONI -->
+    <div id="section1" class="internal-screen card" style="display:none;">
+    <button class="btn" onclick="goBack()">← Torna indietro</button>
+    <h2>Letterina per la mia pataccosa</h2>
+    <p id="typewriter-text" style="white-space: pre-line; font-size: 18px; line-height: 1.5;">
+    </p>
+    </div>
+    <div id="section2" class="internal-screen card">
+    <button class="btn" onclick="resetSlider(); goBack()">← Torna indietro</button>
+    <h2>Ecco alcuni dei nostri momenti trascorsi insieme</h2> 
+    <p>Divertiti a scorrere tra i nostri ricordi e le nostre stupidaggini🩵📷</p>
+    <div class="slider">
+    <div class="slides">
+    <img src="I nostri momenti/1.1.jpeg" alt="">
+    <img src="I nostri momenti/1.jpeg" alt="">
+    <img src="I nostri momenti/2.jpeg" alt="">
+    <img src="I nostri momenti/3.jpeg" alt="">
+    <img src="I nostri momenti/4.jpeg" alt="">
+    <img src="I nostri momenti/5.jpeg" alt="">
+    <img src="I nostri momenti/6.jpeg" alt="">
+    <img src="I nostri momenti/7.jpeg" alt="">
+    <img src="I nostri momenti/8.jpeg" alt="">
+    <img src="I nostri momenti/9.jpeg" alt="">
+    <img src="I nostri momenti/10.jpeg" alt="">
+    <img src="I nostri momenti/11.jpeg" alt="">
+    <img src="I nostri momenti/12.jpeg" alt="">
+    <img src="I nostri momenti/13.2.png" alt="">
+    <img src="I nostri momenti/14.png" alt="">
+    <img src="I nostri momenti/15.jpeg" alt="">
+    <img src="I nostri momenti/16.1.jpeg" alt="">
+    <img src="I nostri momenti/17.jpeg" alt="">
+    <img src="I nostri momenti/18.1.png" alt="">
+    <img src="I nostri momenti/19.1.png" alt="">
+    <img src="I nostri momenti/20.1.jpeg" alt="">
+    <img src="I nostri momenti/21.jpeg" alt="">
+    <img src="I nostri momenti/22.jpeg" alt="">
+    <img src="I nostri momenti/23.jpeg" alt="">
+    <img src="I nostri momenti/24.jpeg" alt="">
+    <img src="I nostri momenti/25.jpeg" alt="">
+    <img src="I nostri momenti/26.1.jpeg" alt="">
+    <img src="I nostri momenti/27.jpeg" alt="">
+    <img src="I nostri momenti/28.jpeg" alt="">
+    <img src="I nostri momenti/29.1.jpeg" alt="">
+    <img src="I nostri momenti/30.jpeg" alt="">
+    <img src="I nostri momenti/31.jpeg" alt="">
+    <img src="I nostri momenti/32.1.jpeg" alt="">
+    <img src="I nostri momenti/33.jpeg" alt="">
+    <img src="I nostri momenti/34.1.png" alt="">
+    <img src="I nostri momenti/35.jpeg" alt="">
+    <img src="I nostri momenti/36.jpeg" alt="">
+    <img src="I nostri momenti/37.jpeg" alt="">
+    <img src="I nostri momenti/38.png" alt="">
+    <img src="I nostri momenti/39.jpeg" alt="">
+    <img src="I nostri momenti/40.jpeg" alt="">
+    <img src="I nostri momenti/41.jpeg" alt="">
+    <img src="I nostri momenti/42.jpeg" alt="">
+    <img src="I nostri momenti/43.jpeg" alt="">
+    <img src="I nostri momenti/44.jpeg" alt="">
+    <img src="I nostri momenti/45.jpeg" alt="">
+    <img src="I nostri momenti/46.jpeg" alt="">
+    <img src="I nostri momenti/47.jpeg" alt="">
+    <img src="I nostri momenti/48.jpeg" alt="">
+    <img src="I nostri momenti/49.jpeg" alt="">
+    <img src="I nostri momenti/51.jpeg" alt="">
+    <img src="I nostri momenti/52.jpeg" alt="">
+    <img src="I nostri momenti/53.jpeg" alt="">
+    <img src="I nostri momenti/54.jpeg" alt="">
+    <img src="I nostri momenti/55.jpeg" alt="">
+    <img src="I nostri momenti/56.jpeg" alt="">
+    <img src="I nostri momenti/57.jpeg" alt="">
+    <img src="I nostri momenti/58.jpeg" alt="">
+    <img src="I nostri momenti/59.jpeg" alt="">
+    <img src="I nostri momenti/60.jpeg" alt="">
+    <img src="I nostri momenti/61.jpeg" alt="">
+    <img src="I nostri momenti/62.jpeg" alt="">
+    <img src="I nostri momenti/63.jpeg" alt="">
+    <img src="I nostri momenti/64.jpeg" alt="">
+    <img src="I nostri momenti/65.jpeg" alt="">
+    <img src="I nostri momenti/66.png" alt="">
+    <img src="I nostri momenti/67.jpeg" alt="">
+    <img src="I nostri momenti/68.jpeg" alt="">
+    <img src="I nostri momenti/69.jpeg" alt="">
+    <img src="I nostri momenti/70.jpeg" alt="">
+    <img src="I nostri momenti/71.jpeg" alt="">
+    <img src="I nostri momenti/72.jpeg" alt="">
+    <img src="I nostri momenti/73.jpeg" alt="">
+    <img src="I nostri momenti/74.jpeg" alt="">
+    <img src="I nostri momenti/75.jpeg" alt="">
+    <img src="I nostri momenti/76.jpeg" alt="">
+    <img src="I nostri momenti/77.jpeg" alt="">
+    <img src="I nostri momenti/78.jpeg" alt="">
+    <img src="I nostri momenti/79.jpeg" alt="">
+    <img src="I nostri momenti/80.png" alt="">
+    <img src="I nostri momenti/81.jpeg" alt="">
+    <img src="I nostri momenti/82.png" alt="">
+    <img src="I nostri momenti/83.jpeg" alt="">
+    <img src="I nostri momenti/84.jpeg" alt="">
+    <img src="I nostri momenti/85.jpeg" alt="">
+    <img src="I nostri momenti/86.jpeg" alt="">
+    </div>
+    </div>
+    </div> 
+    <div id="section3" class="internal-screen card">
+    <button class="btn" onclick="goBack()">← Torna indietro</button>
+    <h2>Quando le ascolto è come se ci fossi anche tu con me</h2>
+   <div class="songs-grid">
+
+  <div class="song-card">
+    <span class="heart">🩵</span>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" class="spotify-embed"
+    src="https://open.spotify.com/embed/track/78F6s5j8febWk0ICOAIxjM?utm_source=generator&theme=0" 
+    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
+    clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <p>"Miettete in posa, 'stu viento te tocca, te faccio na foto
+Dimme caccosa che sape 'e futuro, 'o passato se scorda
+Però mo ce staje tu e allora statte n'a' poco
+È'sta vita che corre, tu c'hê capito caccosa?
+</p>
+  </div>
+
+  <div class="song-card">
+    <span class="heart">🩵</span>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" class="spotify-embed"
+    src="https://open.spotify.com/embed/track/1n16h52XziJJhIvWAIlz6k?utm_source=generator&theme=0" 
+    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
+    clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <p>"T'o giuro ca te voglio bbene
+E scusa si mo nun se vede
+T'o giuro ca chello che provo È forte assaje comme'na catena".
+</p>
+  </div>
+
+  <div class="song-card">
+    <span class="heart">🩵</span>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" class="spotify-embed"
+    src="https://open.spotify.com/embed/track/7os93Vpc5gJ40Fm0QC48a8?utm_source=generator&theme=0" 
+    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
+    clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <p>"Nuje simmo 'a forza d"o magnitudo
+Quando m'abbraccie, stongo al sicuro cu tte
+E si chiove nun fa niente
+Nuje simmo abituate
+E si torna'o maletiempo
+Tu si ll'arcobaleno".
+</p>
+  </div>
+
+  <div class="song-card">
+    <span class="heart">🩵</span>
+    <iframe data-testid="embed-iframe" style="border-radius:12px" class="spotify-embed" 
+    src="https://open.spotify.com/embed/track/5ukcsJ6xFum4aGyd4s2clw?utm_source=generator&theme=0"
+    width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
+    clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <p>"Che vita foss si nn'ce fossm' ncuntrat maje.
+      Nun te puo' accorgere quant'è tutt'o ben ca me faje".
+    </p>
+  </div>
+  <div class="song-card">
+    <span class="heart">🩵</span>
+<iframe data-testid="embed-iframe" style="border-radius:12px" class="spotify-embed"
+src="https://open.spotify.com/embed/track/0sjSgTluUJIdqfyRe4EQ4U?utm_source=generator&theme=0" 
+width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
+clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<p>"Può nascere dovunque
+anche dove non ti aspetti
+dove non l'avresti detto
+dove non lo cercheresti
+può crescere dal nulla
+e sbocciare in un secondo
+può bastare un solo sguardo
+per capirti fino in fondo. (...)
+L'amore mio sei tu"
+  </p>
+</div>
+ <div class="song-card">
+    <span class="heart">🩵</span>
+<iframe data-testid="embed-iframe" style="border-radius:12px" class="spotify-embed" 
+src="https://open.spotify.com/embed/track/5klQSk2bLb0U3vnvGJUZf4?utm_source=generator&theme=0" 
+width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
+clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<p>"Succede anche a noi
+Di far la guerra e ambire poi alla pace. (...)
+Torneró all'origine
+Torno a te, che sei per me l'essenziale"
+  </p>
+</div>
+</div>
+</div>
+    <div id="section4" class="internal-screen card">
+    <button class="btn" onclick="goBack()">← Torna indietro</button>
+    <h2>Per il nostro futuro e la nostra vita ti prometto che...</h2>
+    <ul class="romantic-list animated-list">
+  <li><span class="heart">🩵</span> Molto presto elimineremo questa distanza e ci vedremo tutti i giorni;  🫂👩🏻‍❤️‍👨🏻 </li>
+  <li><span class="heart">🩵</span> Ci sposeremo 💍👰🏻‍♀️🤵🏻‍♂️</li>
+  <li><span class="heart">🩵</span> Andremo a vivere insieme e avremo i nostri cognomi scritti sul citofono di casa; 🏠</li>
+  <li><span class="heart">🩵</span> Avremo dei figli, un maschio e una femmina, e li chiameremo Enea e Matilde;  🧑🏻‍🦱👧🏻</li>
+  <li><span class="heart">🩵</span> Avremo tanti gatti in casa e al massimo un cane come tu desideri; 🐈🐈🐕</li>
+  <li><span class="heart">🩵</span> Avremo una stanza dedicata solo al tuo guardaroba in casa nostra; 👗👙 </li>
+  <li><span class="heart">🩵</span> Torneremo a visitare la Grecia;</li>
+  <li><span class="heart">🩵</span> Torneremo a Napoli; 🌋🍕</li>
+  <li><span class="heart">🩵</span> Ti porterò a visitare il mondo; ✈️🌏</li>
+  <li><span class="heart">🩵</span> Ti porterò a visitare Amsterdam o Formentera; 🌿🦎</li>
+  <li><span class="heart">🩵</span> Ti comprerò tutto ciò che ti serve per il tuo guardaroba (Borse, Vestiti, Tacchi); 🛍️👗👠</li>
+  <li><span class="heart">🩵</span> Non ti tradirò mai; 🐶🫡</li>
+  <li><span class="heart">🩵</span> Potrai sempre fidarti di me; ♾️🫀⛓️</li>
+  <li><span class="heart">🩵</span> Ti tratterò sempre da regina; 👸🏻🧎🏻</li>
+  <li><span class="heart">🩵</span> Sarai per sempre la mia pataccosa; 💃🏻👫🏻</li>
+  <li><span class="heart">🩵</span> Non smetterò mai di amarti; 🪢🥰👩🏻‍❤️‍💋‍👨🏻
+  <li><span class="heart">🩵</span> Quando stai male avrai sempre un posto dove rifugiarti;🔐 </li>
+  <li><span class="heart">🩵</span> Non mi stancherò mai di te; ❌🙅🏻‍♂️🪫</li>
+  <li><span class="heart">🩵</span> Ti farò tanti massaggi ogni volta che ti servono; 💆🏻‍♀️</li>
+  <li><span class="heart">🩵</span> Esaudirò ogni tuo desiderio. 🌈🧞</li>
+</ul>
+    </div>
+<div id="section5" class="internal-screen card">
+  <button class="btn" onclick="goBack()">← Torna indietro</button>
+
+  <!-- TITOLO CON ID PER POTERLO CAMBIARE -->
+  <h2 id="section5-title" class="fire-heart">Il luogo dove tutto è iniziato...</h2>
+
+  <div class="heart-frame" onclick="revealRealPlace()">
+    <div class="heart-mask">
+      <img id="map-place" src="Foto/Mappa.png">
+    </div>
+  </div>
+
+  <!-- FOTO REALE FUORI DAL CUORE -->
+  <img id="real-place" src="Foto/Posto.png" class="real-place-hidden">
+
+  <!-- Didascalia che appare solo dopo il click -->
+  <p id="real-caption" style="display:none; text-align:center; margin-top:10px; font-size:16px; color:#444;">
+  </p>
+
+  <!-- Testo iniziale -->
+  <p style="text-align:center; margin-top:20px;" id="place-hint">
+    Clicca sul cuore per rivivere le emozioni di quel giorno 🩵✨
+  </p>
+</div>
+
+
+    <div id="section6" class="internal-screen card">
+    <button class="btn" onclick="goBack()">← Torna indietro</button>
+    <h2>Da quando ci siamo baciati sono passati...</h2>
+    <div id="love-timer-box" style="margin-top: 25px; text-align: center;">
+  <span id="pulse-heart">🩵</span>
+  <span id="love-timer" class="digital-text">Calcolo del tempo insieme...</span>
+</div>
+    <p>Ogni secondo con te diventa speciale bimba mia.🩵💎</p>
+    </div>
+    
+    <script> // Imposta qui la password che vuoi usare//
+   // Salvataggio contenuto originale section3
+const section3 = document.getElementById("section3");
+const originalSection3HTML = section3.innerHTML;
+
+function resetSection3() {
+  section3.innerHTML = originalSection3HTML;
+}
+
+// Password corretta
+const CORRECT_PASSWORD = "09/08/2025";
+
+// Nasconde tutte le schermate interne
+function hideAllSections() {
+  const screens = document.querySelectorAll('.internal-screen');
+  screens.forEach(screen => {
+    screen.style.display = "none";
+    screen.classList.remove("show-screen");
+  });
+}
+
+// Mostra una schermata con animazione corretta
+function showScreen(id) {
+  hideAllSections();
+
+  const screen = document.getElementById(id);
+
+  // Mostra la schermata
+  screen.style.display = "block";
+
+  // Forza il reflow per riattivare l’animazione
+  void screen.offsetWidth;
+
+  // Applica animazione
+  screen.classList.add("show-screen");
+}
+
+// Controllo password
+function checkPassword() {
+  const input = document.getElementById("password").value;
+  const errorMessage = document.getElementById("error-message");
+
+  if (input === CORRECT_PASSWORD) {
+
+    // Effetti speciali
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+    glitterBurst(centerX, centerY);
+    showBigHeart();
+    screenFlash();
+    fullRibbon();
+    sparkInCenter();
+
+    setTimeout(() => {
+      playMusic();
+      showScreen("gift-screen");
+      startLoveTimer();
+    }, 900);
+
+  } else {
+    showWrongPassword();
+  }
+}
+
+// Cuori fluttuanti
+function createFloatingHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart-floating");
+  heart.textContent = "🩵";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}
+setInterval(createFloatingHeart, 800);
+
+// Apertura sezione
+function openSection(sectionId) {
+  hideAllSections();
+
+  const clickedBox = event.currentTarget;
+
+  // Effetto cuori
+  const rect = clickedBox.getBoundingClientRect();
+  explodeHeartsAt(rect.left + rect.width / 2, rect.top + rect.height / 2);
+
+  // Effetto apertura box
+  clickedBox.classList.add("opening");
+
+  setTimeout(() => {
+    clickedBox.classList.remove("opening");
+
+    // Mostra la sezione con animazione
+    showScreen(sectionId);
+
+    // Slider sezione 2
+    if (sectionId === "section2") {
+      startSlider();
+    }
+
+    // Macchina da scrivere sezione 1
+    if (sectionId === "section1") {
+      const lettera = `Ciao Pataccosa mia, questa volta ho deciso di fare qualcosa di diverso, non la solita lettera cartacea, spero ti piaccia allo stesso modo. Siamo giunti a San Valentino ma soprattutto abbiamo fatto 6 mesi, wow e chi lo avrebbe mai detto, ricordo ancora la prima volta che ti vidi in spiaggia, eri bella come il sole, anzi i tuoi occhi e il tuo sguardo mi riscaldavano di più, e appena ti ho vista mi sono detto: “ma chi è quella?” e mi sono precipitato in acqua perché volevo che mi notassi e alla fine ci sono riuscito, mi sono fatto notare così tanto che oggi è mezzo anno che ci amiamo nonostante tutto, che litighiamo, che chiariamo, che andiamo avanti e indietro per Reggio e Milano, che cresciamo insieme ostacolo dopo ostacolo, che ci facciamo sorprese, regali, pensierini; che facciamo chiamate, serate, uscite, gossip, viaggi; mezzo anno di telepatia, connessioni uniche, scherzi, risate, battute, aperitivi, cene, cucina insieme e chi più ne ha più ne metta. Ricordo anche e soprattutto i giorni passati a cercarti, a pensarti, a stalkerarti gli orari per capire quando trovarti in spiaggia e infine ricordo ancora il nostro incontro in cui ci siamo parlati la prima volta e ancora adesso mentre te lo scrivo sto piangendo dall’emozione: era un qualunque giovedì d’estate, precisamente era il 3 luglio. Quel giorno stesso avevo pregato per incontrarti, perché dentro di me sentivo che si stava avvicinando il giorno in cui non ti avrei più rivista e io non me lo sarei mai perdonato, dovevo parlarti. Mi avevi già conquistato senza neanche che potessi toccarti, sentire la tua voce o conoscerti meglio, volevo che tu fossi mia, eri entrata nella mia testa e non ne uscivi più eri diventata un’ ossessione. Arriva la sera, sto scendendo eddy e allungo i tempi sperando con tutto il mio cuore di vederti per parlarti. Niente, non arrivi, inizio a rassegnarmi e con l’anima affranta mi giro per tornare a casa. Ci sei tu. Stai venendo verso la mia direzione, ti vedo. Il cuore inizia a battere forte. “Non ci credo” mi ripetevo, era come un’illuminazione, come quando nel mezzo della notte ti accendono la luce e non capisci più niente. Le gambe tremavano mentre piano piano mi avvicinavo a te continuando a fissarti incantato. Di fianco a te c’è tua mamma, ma ad un tratto va via, resti tu. Io mi fermo, avevo giurato con tutto me stesso che ti avrei parlato, e a due passi da me ti fermi anche tu, io resto imbambolato davanti al giornalaio per capire come approcciarti. Conto fino a tre, “Via” e mi avvicino a te “scusa ti disturbo” “no dimmi pure” “piacere Mattia” “piacere Alice” “ti ho vista in spiaggia ti posso chiedere il numero?” “ho l’insta va bene lo stesso?” “no meglio il numero” “va bene tieni” “come hai detto che ti chiami?” mi chiedi ridendo perché dall’ansia ti eri già scordata il mio nome “Mattia”, “tu Alice giusto?” anch’io ridendo perché come te preso dall’ansia avevo paura di essermi scordato il nome “perfetto allora se ti va domani ci becchiamo in spiaggia” “ma perché un giro ora non te lo fai” “ma certo, aspettami qui che porto su il cane”. Da qui ha inizio la nostra storia, una vera storia d’amore, quelle storie che non dimentichi più e che racconti ogni qualvolta ti trovi a tavola con quei parenti che non vedi da anni e chiedono se sei fidanzato, o in generale quando vuoi raccontare ad amici di amici che il vero amore esiste e che prima o poi la persona giusta la troviamo tutti. Tu sei quella persona, tu sei la mia persona e non ho alcun dubbio a riguardo. Non solo hai riportato in vita un Mattia che non esisteva più, che aveva perso ogni emozione e che si sentiva privo di sentimenti, ma hai riportato in vita anche il Mattia bambino, quello che era abituato ad essere sensibile, generoso, felice, affettuoso, permaloso e che aveva smesso di esistere, ma che con te ha ritrovato il coraggio e il suo posto sicuro dove si è sentito immediatamente a casa e libero di tornare a farsi vedere. Credimi quando ti dico che i sentimenti che provo per te non li avevo mai sentiti e anzi non sapevo neanche fossi in grado di amare così tanto: vederti felice non ha prezzo, mi impegno al massimo e dedico tutto me stesso a farti sorprese, regali, pensierini con l’obiettivo di vedere ogni giorno quel maledetto sorriso stampato sulla tua faccia. Tutto questo perché la tua felicità corrisponde alla mia. Sei diventata parte di me, ti tengo tatuata nella mente e ho il tuo nome inciso nel cuore, ti penso e mi manchi ogni istante delle mie giornate. Il mio più grande obiettivo è vivere con te, in modo da poter finalmente eliminare questa distanza e iniziare a vivere e realizzare i nostri piani futuri. Sei mesi Sembrano poco ma non lo sono affatto, stiamo portando avanti una relazione che in pochi riuscirebbero a sostenere, sfiderei chiunque a farlo, e sono davvero orgoglioso di star affrontando tutto ciò con te, sei la persona perfetta con la quale crescere e vivere questa relazione fatta da emozioni intense e pure. Sai, a volte penso a quelle poesie che tutti i poeti famosi dedicano alle loro amate e mi convinco sempre di più che io sono stato davvero fortunato perché la mia amata l’ho trovata e l’ho avuta, altrimenti mi facevi diventare il nuovo Dante con Beatrice mamma mij. Tu non sei solo la mia fidanzata, sei prima di tutto la mia amica, la mia migliore amica, la mia forza, la mia anima, e poi la mia dolce metà, mia moglie, il mio posto sicuro, la persona con la quale confidarmi, sfogare, piangere, soffrire, maturare, litigare, chiarire, ridere, scherzare, tu sei tutto ciò che si può trovare in una singola persona, anche per questo ti amo alla follia perché con te io mi sento completo, basti tu al mio fianco e qualsiasi esperienza o qualsiasi momento diventa speciale, indimenticabile e unico. Guarda dove siamo arrivati e dove stiamo continuando ad andare, non solo noi come coppia, ma anche tu come persona: sei diventata bravissima, ti stai impegnando, stai mettendo tutta te stessa in questa relazione ma anche nella scuola e nelle tue passioni. Ti sei iscritta in palestra e a scuola ormai sei una secchiona non ti riconosco più, no dai scherzo sono la persona più orgogliosa e fiera di questo mondo, continua sempre e per sempre così, sei spettacolare i tuoi risultati mi danno la forza e la voglia di andare avanti e continuare a fare bene anch’io, eh sì è proprio così anche se non si nota sei tu che mi stai portando avanti, è tutto grazie a te. Il tuo modo di essere e di fare è indescrivibile, anche se non lo mostri spesso, sei una persona con un cuore d’oro e pieno di emozioni, le persone non lo notano ma io l’ho notato e lo vedo che provi più emozioni di quanto si possa dedurre, ormai ti conosco come le mie tasche non mi sono limitato al superficiale io cerco sempre ogni dettaglio in te perché desidero conoscerti fino in fondo: so che quando sei arrabbiata tendi a mangiarti e a romperti le unghie dei pollici; so che ti piace essere amata, coccolata, desiderata perché in fondo l’hai sempre voluto il vero amore e io ti dimostrerò fino alla tomba che esiste ed è quello che c’è tra di noi; so che quando sei giù di morale ti convinci che non sei in grado in niente, ti abbatti e ti demoralizzi e che l’unica cosa che vuoi fare e staccare dal mondo e dormire; so che un tuo modo per rilassarti e farti le unghie mentre guardi elisa true crime oppure truccarti; so tutto ciò che ti fa soffrire, che ti crea malcontento, che ti lascia pensierosa. Insomma in questo mezzo hanno ho imparato a conoscerti fino al profondo del tuo cuore e devo dire che ho scoperto davvero una persona interessante, imparagonabile, singolare: sei sensibile, intelligente, emotivamente matura, accogliente, generosa, gentile, educata, femminile, solare, divertente, indipendente, determinata, ma anche suscettibile, schietta, sincera, pura, vera, reale, concreta, molto razionale, sei semplicemente ammirevole, sei un mondo da scoprire; poi come lo spieghiamo alle persone che quando sei arrabbiata saresti capace di stendere un orso, ma che quando sei tranquilla non riusciresti a far male nemmeno ad un fiore, sei esemplare credimi. Sfortunatamente stiamo litigando tanto nell’ultimo periodo e non sai quanto mi pianga il cuore ogni volta, sì magari tu pensi che ti voglia incolpare, che faccio l’incazzato che penso cose brutte di te, ma la verità è che ci soffro tantissimo e mi dispiace e ti chiedo perdono se ti faccio stare male e ti rovino le giornate, non è mia intenzione. Purtroppo sappiamo quanto sia difficile non stare vicini, la distanza ultimamente si è fatta davvero pesante e non saprei spiegarti nemmeno io il motivo, forse perché più andiamo avanti più vogliamo stare insieme e viverci realmente nella nostra quotidianità, so solo che dentro di me mi manchi, sei passata ad essere una sconosciuta in spiaggia ad una parte essenziale di me senza la quale le giornate perdono di valore senza la tua presenza. Ti prometto con tutto me stesso, la mia anima, il mio cuore che migliorerò, lo so l’ho detto tante volte ma ti giuro ci sto provando e ci riuscirò e soprattutto anche noi riusciremo a stare bene davvero, chiaramente a distanza sarà sempre un po’ diverso ed è difficile parlare di “stare bene” se non ci vediamo, ma almeno non litigare e restare uniti per questi altri pochi mesi fin quando non arriva l’estate e soprattutto l’anno nuovo dove davvero avverrà il cambiamento. Ricordati sempre che io sono e sarò sempre dalla tua parte, nel bene e nel male, in salute e malattia (sì sto anticipando il matrimonio) e anche quando litighiamo e sembra difficile crederci, pensa sempre che io sto con te, io voglio solo il tuo bene più di qualunque altra persona e soprattutto noi due siamo nella stessa squadra per battere il problema o l’ostacolo. Io ti amo sempre e soprattutto nei litigi amó, non esiste che quando litighiamo mi scorda di chi sei e inizio a trattarti come una pezza, mi posso arrabbiare, posso sfogare sul momento, ma non alzerò mai la voce con te, non ti sfiorerò mai nemmeno con un dito, non ti dirò parolacce, non ti odierò mai e non devi avere paura di me perché non reagirò mai male per qualsiasi cosa succede, anzi ne parlerò sempre con calma e pazienza e spero che questo tu lo sappia. Quindi anche quando litighiamo ricordati sempre che ti amo ed è per questo che la mia buonanotte non cambia mai, certo magari non metto il nomignolo ma più di questo mai. Infine, chiaramente, non ti tradirò mai perché ho scelto te e faccio sul serio con te perché voglio un futuro e un famiglia e in entrambi voglio che al mio fianco ci sia tu. Poi per favore ricordati sempre che sei bellissima, davvero, io non so come mettertelo in testa che hai un fisico spaziale, ogni singola parte del tuo corpo è senza senso, non esistono parole per descriverle. Amo i tuoi capelli in ogni loro forma, lisci, ricci, mossi, boccolosi, ogni stile ti dona divinamente perché su di te nulla potrebbe mai stare male; amo il tuo sguardo, i tuoi occhi, il loro taglio (per poco non sei una cinesina) e come mi guardano innamorati, dentro di essi ci vedo l’infinito che corrisponde al nostro per sempre, al nostro futuro. Il loro colore è bellissimo e poi quel maledetto dettaglio del tuo occhio destro con quella piccola perla di nero nel tuo magnifico occhio marrone ambra cangiante mi manda fuori di testa, ti rende speciale e diversa da tutte; amo i tuoi lineamenti del viso, insieme formano un’armonia indissolubile, occhi, naso stupendo abbellito dal piercing bellissimo e tu non riesci a capirne la bellezza perché è proprio quella gobbetta che tanto critichi che te lo rende unico e speciale, bocca con delle labbra carnose troppo invitanti che non smetterei mai di baciare e un sorriso che ogni volta che mi guarda mi stende e mi fa perdere i sensi, zigomi, mandibola, mento, le orecchie che con tutti quei gioielli sono stupende peccato si vedano poco perché sono coperte dalla bellezza dei tuoi capelli e infine anche quel tuo neo sempre sul lato destro della faccia come se fosse una combo con l’occhio è la ciliegina sulla torta; amo Il tuo collo mi attrae e mi piace farti da collana con le mie mani; amo le tue spalle e le tue braccia che al contrario di quanto pensi tu sono normalissime e anzi sono molto femminili ti rendono ancora più bella; amo le tue tette sono meravigliose e eccitanti e infatti a me piacciono esattamente così come sono e loro lo sanno bene fidati; amo la tua pancia è piattissima non è vero che sei ingrassata e i tuoi fianchi a clessidra che te lo dico a fare quanto è bello afferrarteli; amo le tue mani, persino le tue mani sono uniche e speciali non ne avevo mai viste così belle sia con le unghie sia senza sono troppo sensuali te lo giuro; amo Il tuo culo ha una forma geometrica è letteralmente perfetto e soprattutto è sodo, il culo migliore che potessi desiderare lo adoro troppo sexy; vabe poi chiaramente amo lei, non voglio entrare troppo nei dettagli perché dovrebbe essere una lettera romantica, ma comunque già sai cosa penso dell’ultimo componente non c’è bisogno che te lo ripeta hahaha; amo le tue cosce sono della grandezza perfetta, metterci la mano sopra è fantastico e non smetterei mai di farlo; amo i tuoi polpacci, può sembrare una stupidata ma in realtà sono molto ma molto attraenti, li hai davvero davvero belli wow non ti manca proprio niente; e infine ci sono loro, i miei amori, amo i tuoi piedi sono di una sensualità, di un sexy e di un eccitante indescrivibili, sono la mia vita. Insomma Ali, non ci vuole tanto a capire, amo te in ogni tua sfaccettatura, io ti amo con tutto me stesso e non cesserò mai di provare questi sentimenti così forti per te, perché un qualcosa di così forte non smette di esistere nemmeno dopo la morte e ci giurerei. Io amo ogni singolo dettaglio di te e della tua persona, per questo fai questo sforzo per me ma soprattutto per te, basta sottovalutarti, vederti male e prendertela con te stessa, hai un fisico da modella tutti mi invidiano perché stai con me, in tantissimi ti vorrebbero e invece no tu sei la mia latina e mia resterai nessuno potrà portarti via dalle mie braccia. È anche per questo che sono geloso se ci pensi, sì perché io sono molto ma molto geloso di te se non si fosse notato, perché sei di una bellezza naturale invidiabile da tutte le donne di questo mondo e ovviamente i maschi lo notano e sono pronti lì come leoni, ovviamente ci sono io quindi possono e devono farsi immediatamente da parte ma è sempre un rischio per questo sono leggermente ma poco poco geloso. Spero di riuscire a farti sentire desiderata, perché credimi sei la persona che sogno di più. Sei bellissima in ogni situazione amore della mia vita, truccata, struccata, appena sveglia, mentre piangi, mentre dormi, mentre mangi, mentre cucini, mentre cammini, tutta vestita e pronta per la serata, in pigiama, triste, arrabbiata, felice, pensierosa, stressata, in burka, pelata, davvero ti amo e ti amerei in ogni modo e aspetto della tua persona. Che dire regina, mia sono davvero grato alla vita e a Dio per avermi salvato da tutto facendomi incontrare con te e per avermi dato la forza di fare quel passo avanti. Sono stati 6 mesi fantastici, non mi importa dei litigi, sono stati i 6 mesi migliori della mia vita, insieme stiamo crescendo e raggiungendo i nostri obiettivi: ho preso la patente con te che mi aspettavi a casa non sai che soddisfazione averla presa e sapere che ci fossi tu lì al mio fianco a sostenermi. Mi hai migliorato la vita e continuerai a farlo, tu mi tieni vivo, mi fai sentire le emozioni quelle vere, non quelle che ti sforzi o impegni a sentire, tu le fai sbucare e basta senza troppo impegno, basta che sento il tuo nome. E sai qual è il bello di questo nostro amore? è che io non ho scelto di amarti, ho scelto te e di stare con te, ma non i sentimenti da provare nei tuoi confronti, io non cercavo l’amore anzi stavo cercando di scappare da quest’ultimo, però poi sei arrivata tu e con la forza di un’onda che travolge i castelli di sabbia hai scombinato tutti i miei piani e ora sono qui, al tuo fianco, perché una come te non potevo mai farmela scappare. Grazie di tutto bambina mia davvero, grazie di questi mesi, grazie di supportarmi, starmi vicino, grazie per la pazienza che hai nei miei confronti perché so che molte ma molte volte sono pesante e sono sicuro che ti do fastidio ma spero che questo non ti porti mai a scocciarti di me perché saresti il rimpianto più grande della mia vita. Io voglio solo essere me stesso con te e sto cercando di migliorare te lo garantisco, però nel frattempo che miglioro non voglio che ti scocci di me per come sono fatto. Lo sto notando un po’ in questi giorni, magari è perché è una settimana intera che litighiamo, magari è per la scuola, magari è perché entrambi siamo stressati per altro, però ho visto un distacco e io non voglio mai che questo accada perché ho paura di perderti e non me lo perdonerei mai se dovesse succedere. Per questo ti ripeto, grazie mille per la tua pazienza io ti prometto e ti garantisco che migliorerò certi aspetti che danneggiano la nostra relazione e che ti fanno stare male, ci metterò tutto me stesso e ci puoi giurare. Ti amo tesoro mio, sono il ragazzo più fortunato al mondo, perché sei una su un miliardo, donne come te in giro non se ne vedono, non se ne trovano, e io ho fatto proprio jackpot nella vita, altro che schedine, sei tu la mia schedina vinta. Pccrè t’salut pcche si no sta lettr nun frnesc cchiù, sij l’anima mij, m’è fatt na magij, nun sacc ch incantesim è usat ma to giur ch fa effett, fa effett assaij pcchè e te m so nammurat perz e nun teng genj e truà a strada giust. To prumett ca s stai nsiem a me t’accuntent p tutt’a vit. Ancora buon San Valentino Pataccosa e Buon mesiversario a noi tam pccrè sij o cor mij, sij a vita mij, sij o zuccr. 💍🩵.
+<span class="firma">
+Ieri,<br>
+Oggi,<br>
+Domani,<br>
+Per sempre.<br><br>
+~Dal tuo dolce Tato~
+</span>
+`;
+     const box = document.getElementById("typewriter-text");
+     // Inserisce la lettera immediatamente 
+     box.innerHTML = lettera;
+     // Attiva il fade-in dopo un piccolo delay 
+     setTimeout(() => { 
+    box.classList.add("show"); 
+  }, 100);
+    }
+
+  }, 100);
+}
+
+// Torna alla password
+function goBackToPassword() {
+  document.getElementById("password").value = "";
+  showScreen("password-screen");
+}
+
+   function goBack() { 
+  resetSection3();
+  document.getElementById("place-hint").style.display = "block";
+  // Ripristina titolo e didascalia 
+  document.getElementById("section5-title").textContent = "Il luogo dove tutto è iniziato..."; 
+  document.getElementById("real-caption").classList.remove("show");
+  // Ripristina la mappa e nasconde la foto reale
+  const map = document.getElementById("map-place");
+  const heart = document.querySelector(".heart-frame");
+  const real = document.getElementById("real-place");
+
+  map.classList.remove("zoom-map"); 
+  heart.classList.remove("hide-heart"); 
+  heart.classList.remove("remove-heart-space");
+  heart.style.display = "block";
+  real.style.display = "none";
+
+  // Torna alla schermata principale regalo
+  showScreen("gift-screen");
+}
+
+function playMusic() {
+  const audio = document.getElementById("bg-music");
+  audio.volume = 0.4;
+  audio.play();
+}
+
+function startLoveTimer() {
+  const startDate = new Date("2025-08-09T00:00:00");
+
+  function updateTimer() {
+    const now = new Date();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("love-timer").textContent =
+      `${days} giorni, ${hours} ore, ${minutes} minuti e ${seconds} secondi`;
+  }
+
+  updateTimer();
+  setInterval(updateTimer, 1000);
+}
+
+document.addEventListener("mousemove", function(e) {
+  const dot = document.createElement("div");
+  dot.classList.add("trail-dot");
+  dot.style.left = e.pageX + "px";
+  dot.style.top = e.pageY + "px";
+  document.body.appendChild(dot);
+
+  setTimeout(() => dot.remove(), 600);
+});
+
+function explodeHeartsAt(x, y) {
+  for (let i = 0; i < 8; i++) {
+    const heart = document.createElement("div");
+    heart.classList.add("heart-explosion");
+    heart.textContent = "🩵";
+
+    const angle = (Math.PI * 2 * i) / 8;
+    const distance = 80;
+
+    heart.style.left = x + "px";
+    heart.style.top = y + "px";
+    heart.style.setProperty("--x", Math.cos(angle) * distance + "px");
+    heart.style.setProperty("--y", Math.sin(angle) * distance + "px");
+
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 800);
+  }
+}
+
+for (let i = 0; i < 40; i++) {
+  const star = document.createElement("div");
+  star.classList.add("star");
+  star.style.left = Math.random() * 100 + "vw";
+  star.style.top = Math.random() * 100 + "vh";
+  star.style.animationDelay = Math.random() * 3 + "s";
+  document.getElementById("stars-container").appendChild(star);
+}
+
+function glitterBurst(x, y) {
+  for (let i = 0; i < 10; i++) {
+    const g = document.createElement("div");
+    g.classList.add("glitter-burst");
+    g.textContent = "✨";
+
+    const angle = (Math.PI * 2 * i) / 10;
+    const distance = 120;
+
+    g.style.left = x + "px";
+    g.style.top = y + "px";
+    g.style.setProperty("--x", Math.cos(angle) * distance + "px");
+    g.style.setProperty("--y", Math.sin(angle) * distance + "px");
+
+    document.body.appendChild(g);
+    setTimeout(() => g.remove(), 800);
+  }
+}
+
+function showBigHeart() {
+  const h = document.createElement("div");
+  h.classList.add("big-heart");
+  h.textContent = "🩵";
+  document.body.appendChild(h);
+  setTimeout(() => h.remove(), 1200);
+}
+
+function screenFlash() {
+  const f = document.createElement("div");
+  f.classList.add("screen-flash");
+  document.body.appendChild(f);
+  setTimeout(() => f.remove(), 600);
+}
+
+function fullRibbon() {
+  const r = document.createElement("div");
+  r.classList.add("full-ribbon");
+  document.body.appendChild(r);
+  setTimeout(() => r.remove(), 1000);
+}
+
+function sparkInCenter() {
+  const positions = [
+    { x: "50vw", y: "-20px", sx: "0", sy: "40px" },
+    { x: "50vw", y: "100vh", sx: "0", sy: "-40px" },
+    { x: "-20px", y: "50vh", sx: "40px", sy: "0" },
+    { x: "100vw", y: "50vh", sx: "-40px", sy: "0" }
+  ];
+
+  positions.forEach(p => {
+    const s = document.createElement("div");
+    s.classList.add("spark-in");
+    s.textContent = "✨";
+    s.style.left = p.x;
+    s.style.top = p.y;
+    s.style.setProperty("--sx", p.sx);
+    s.style.setProperty("--sy", p.sy);
+    document.body.appendChild(s);
+    setTimeout(() => s.remove(), 800);
+  });
+}
+
+function revealRealPlace() {
+  document.getElementById("place-hint").style.display = "none";
+
+  const map = document.getElementById("map-place");
+  const heart = document.querySelector(".heart-frame");
+  const real = document.getElementById("real-place");
+const title = document.getElementById("section5-title"); 
+const caption = document.getElementById("real-caption");
+// Cambia il titolo 
+title.textContent = "Ecco il nostro posto del cuore🩵"; 
+// Imposta la didascalia 
+caption.textContent = "Noi eravamo proprio lì... che ricordi🧑🏻‍❤️‍👩🏻";
+caption.classList.add("show");
+  map.classList.add("zoom-map");
+
+  setTimeout(() => {
+    heart.classList.add("hide-heart");
+  }, 400);
+
+  setTimeout(() => {
+    real.style.display = "block"; 
+  }, 600); 
+
+  setTimeout(() => {
+    heart.style.display = "none";
+  }, 700);
+}
+
+let noClicks = 0;
+
+const noPhrases = [
+  "Sei sicura? 😏",
+  "Dai davvero? 🥺",
+  "Guarda che non potrai avere il tuo regalo eh 😡",
+  "Ti supplico! 😭"
+];
+
+function answerNo() {
+  const noBtn = document.getElementById("noBtn");
+  const yesBtn = document.getElementById("yesBtn");
+
+  if (noClicks < noPhrases.length) {
+    noBtn.textContent = noPhrases[noClicks];
+    noBtn.classList.add("shake");
+    setTimeout(() => noBtn.classList.remove("shake"), 400);
+
+    noBtn.style.transform = `scale(${1 - noClicks * 0.2})`;
+    yesBtn.style.transform = `scale(${1 + noClicks * 0.25})`;
+
+    noClicks++;
+    return;
+  }
+
+  yesBtn.classList.add("big-pop");
+  noBtn.style.opacity = "0";
+  noBtn.style.pointerEvents = "none";
+}
+
+function answerYes() {
+  showScreen("middle-screen");
+}
+
+function goToPassword() {
+  showScreen("password-screen");
+}
+
+// SLIDER
+let currentIndex = 0;
+const slides = document.querySelector(".slides");
+const items = document.querySelectorAll(".slides img, .slides video");
+const total = items.length;
+let sliderInterval = null;
+
+function showSlide(index) {
+  slides.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % total;
+  showSlide(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + total) % total;
+  showSlide(currentIndex);
+}
+
+function startSlider() {
+  clearInterval(sliderInterval);
+  currentIndex = 0;
+  showSlide(0);
+  sliderInterval = setInterval(nextSlide, 3000);
+}
+
+function resetSlider() {
+  clearInterval(sliderInterval);
+  currentIndex = 0;
+  showSlide(0);
+  sliderInterval = setInterval(nextSlide, 3000);
+}
+
+items.forEach(item => {
+  item.addEventListener("click", () => {
+    clearInterval(sliderInterval);
+    nextSlide();
+    sliderInterval = setInterval(nextSlide, 3000);
+  });
+});
+
+items.forEach(item => {
+  item.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+    clearInterval(sliderInterval);
+    prevSlide();
+    sliderInterval = setInterval(nextSlide, 3000);
+  });
+});
+
+function showWrongPassword() {
+  showScreen("wrongPassword");
+}
+
+
+    </script>
+    </body>
+    </html>
+
